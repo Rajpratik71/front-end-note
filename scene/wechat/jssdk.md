@@ -1,4 +1,4 @@
-# 微信
+# 微信公众号
 [微信JS-SDK 文档地址](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421141115)。
 
 ## 网页授权
@@ -66,6 +66,9 @@ if(!code && process.env.NODE_ENV !== 'development') {
 }
 
 ```
+
+## 判断是否已关注公众号
+后端可以通过调 API 来判断，是否关注公众号。
 
 ## 一些可能不知道的微信提供的功能
 预览图片（wx.uploadImage），指的是小图，点击后，到新窗口打开大图，然后可以放大，缩写查看图片。

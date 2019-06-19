@@ -1,5 +1,6 @@
 # 常见浏览器bug及处理
 ## 目录
+* [ios 上因为内容太多，滚动条滚动生涩的问题](#ios-scroll-bug)
 * [双边距](#double-margin)
 * [`overflow:hidden`失效](#double-margin)
 * [滚动条bug](#double-margin)
@@ -12,7 +13,13 @@
 * [用 -webkit-mask-image 解决 border-radius 元素对应用了 transform 的子元素 overflow:hidden 失败的 BUG (WebKit).](http://www.html-js.com/article/Mczone-CSS-to-solve-the-element-borderradius-for-child-elements-of-the-overflowhidden-transform-applications-of-the-failure-of-BUG-with-webkitmaskimage)
 * [移动端与border-radius有关的bug](http://makaiqian.com/yu-border-radiusyou-guan-de-bug/)
 * [`<img>`元素底部为何有空白？](https://www.zhihu.com/question/21558138) 去除方法 `img{display:block;}` 或 `img { vertical-align:top/bottom/middle; }`
+* ios keyup 事件不触发
+* ipad 滚动元素内的 positon:fixed 元素超出会被隐藏
 
+## <a name="ios-scroll-bug">ios 上因为内容太多，滚动条滚动生涩的问题</a>
+```
+-webkit-overflow-scrolling: touch; 
+```
 
 ## <a name="double-margin">双边距</a>
 IE6下,一个div盒子如果设置了margin和浮动，便会产生双边距问题。    
@@ -62,4 +69,10 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{
 border:none;padding:0;
 }
 ```
+
+## ios keyup 事件不触发
+解决方案：用 input 事件 而不用 keyup 事件。
+
+## ipad 滚动元素内的 positon:fixed 元素超出会被隐藏
+解决方案：将 positon:fixed 的元素移动到滚动元素外面。
 
